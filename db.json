@@ -1,0 +1,88 @@
+{
+  "jugadores": [
+    {
+      "id": "1",
+      "nombre": "Javi Puado",
+      "email": "puado@rcdespanyol.com",
+      "club": "RCD Espanyol",
+      "posicion": "Delantero",
+      "dorsal": 7
+    },
+    {
+      "id": "2",
+      "nombre": "Joan García",
+      "email": "joan.garcia@rcdespanyol.com",
+      "club": "RCD Espanyol",
+      "posicion": "Portero",
+      "dorsal": 1
+    },
+    {
+      "id": "3",
+      "nombre": "Kike García",
+      "email": "kike.garcia@alaves.com",
+      "club": "Deportivo Alavés",
+      "posicion": "Delantero",
+      "dorsal": 19
+    },
+    {
+      "id": "corrupto-1",
+      "nombre": "X",
+      "email": "correo-corrupto-sin-arroba",
+      "club": "Club Fantasma",
+      "posicion": "Portero",
+      "dorsal": 99
+    }
+  ],
+  "clubes": [
+    {
+      "id": "1",
+      "nombre": "RCD Espanyol",
+      "ciudad": "Barcelona",
+      "fundacion": 1900,
+      "primeraDivision": true,
+      "web": "https://www.rcdespanyol.com"
+    },
+    {
+      "id": "2",
+      "nombre": "Real Madrid",
+      "ciudad": "Madrid",
+      "fundacion": 1902,
+      "primeraDivision": true,
+      "web": "https://www.realmadrid.com"
+    },
+    {
+      "id": "3",
+      "nombre": "Deportivo Alavés",
+      "ciudad": "Vitoria",
+      "fundacion": 1921,
+      "primeraDivision": true,
+      "web": "https://www.deportivoalaves.com"
+    }
+  ],
+  "estadios": [
+    {
+      "id": "1",
+      "nombre": "RCDE Stadium",
+      "ciudad": "Cornellà-El Prat",
+      "capacidad": 40000,
+      "cespedNatural": true,
+      "telefono": "932927700"
+    },
+    {
+      "id": "2",
+      "nombre": "Santiago Bernabéu",
+      "ciudad": "Madrid",
+      "capacidad": 83186,
+      "cespedNatural": true,
+      "telefono": "913984300"
+    },
+    {
+      "id": "3",
+      "nombre": "Mendizorroza",
+      "ciudad": "Vitoria",
+      "capacidad": 19840,
+      "cespedNatural": true,
+      "telefono": "945131018"
+    }
+  ]
+}

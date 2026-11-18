@@ -1,0 +1,47 @@
+:root {
+  --color-primario: #13387f;
+  --color-secundario: #2f6fd0;
+  --fondo: #f4f6fa;
+  --texto: #1f2733;
+  --blanco: #ffffff;
+  --borde: #e3e8ef;
+  --error: #b3261e;
+  --exito: #1b6e2d;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, sans-serif; background: var(--fondo); color: var(--texto); line-height: 1.5; padding: 20px; }
+
+header { text-align: center; margin-bottom: 24px; }
+header h1 { color: var(--color-primario); margin-bottom: 6px; }
+
+.contenedor-principal { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 350px 1fr; gap: 24px; align-items: start; }
+@media (max-width: 800px) { .contenedor-principal { grid-template-columns: 1fr; } }
+
+.panel-formulario { background: var(--blanco); padding: 20px; border-radius: 8px; border: 1px solid var(--borde); }
+.panel-formulario h2 { color: var(--color-primario); margin-bottom: 14px; font-size: 1.2rem; }
+
+.campo-form { margin-bottom: 14px; display: flex; flex-direction: column; gap: 4px; }
+.campo-form label { font-weight: 600; font-size: 0.9rem; }
+.campo-form input, .campo-form select { padding: 8px 10px; font-size: 0.95rem; border: 1px solid var(--borde); border-radius: 6px; }
+.campo-form input:focus, .campo-form select:focus { outline: 2px solid var(--color-secundario); }
+.campo-form input[aria-invalid="true"], .campo-form select[aria-invalid="true"] { border-color: var(--error); background: #fff8f7; }
+
+.mensaje-error { color: var(--error); font-size: 0.82rem; font-weight: 600; }
+.mensaje-exito { background: #e8f5e9; color: var(--exito); padding: 10px; border-radius: 6px; font-size: 0.9rem; margin-top: 12px; font-weight: 600; }
+.aviso-corrupto { background: #fff3cd; color: #856404; border: 1px solid #ffeeba; padding: 12px; border-radius: 8px; margin-bottom: 16px; font-size: 0.9rem; }
+
+.btn-primario { width: 100%; background: var(--color-primario); color: var(--blanco); border: none; padding: 10px 16px; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 0.95rem; }
+.btn-primario:hover { background: var(--color-secundario); }
+.btn-primario:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.btn-borrar { margin-top: 10px; background: #fbe9e7; color: var(--error); border: 1px solid #f5c6cb; padding: 5px 10px; border-radius: 4px; cursor: pointer; font-size: 0.82rem; font-weight: 600; }
+.btn-borrar:hover { background: var(--error); color: var(--blanco); }
+.btn-borrar:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.cabecera-listado { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+.grid-equipos { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 16px; }
+.tarjeta-equipo { background: var(--blanco); border-radius: 8px; border: 1px solid var(--borde); border-top: 5px solid var(--color-primario); padding: 16px; }
+.tarjeta-equipo h3 { color: var(--color-primario); margin-bottom: 4px; }
+.dorsal-badge { display: inline-block; background: var(--color-primario); color: var(--blanco); padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 0.82rem; margin-bottom: 8px; }
+.estado-carga, .estado-error, .estado-vacio { text-align: center; padding: 32px; background: var(--blanco); border-radius: 8px; border: 1px solid var(--borde); }

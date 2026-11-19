@@ -45,3 +45,17 @@ header h1 { color: var(--color-primario); margin-bottom: 6px; }
 .tarjeta-equipo h3 { color: var(--color-primario); margin-bottom: 4px; }
 .dorsal-badge { display: inline-block; background: var(--color-primario); color: var(--blanco); padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 0.82rem; margin-bottom: 8px; }
 .estado-carga, .estado-error, .estado-vacio { text-align: center; padding: 32px; background: var(--blanco); border-radius: 8px; border: 1px solid var(--borde); }
+
+.campo-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.campo-checkbox input {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}

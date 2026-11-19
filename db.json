@@ -31,6 +31,14 @@
       "club": "Club Fantasma",
       "posicion": "Portero",
       "dorsal": 99
+    },
+    {
+      "nombre": "Lamine Yamal",
+      "email": "lamine@gmail.com",
+      "club": "Madrid",
+      "posicion": "Delantero",
+      "dorsal": 10,
+      "id": "qpbR8edtIUY"
     }
   ],
   "clubes": [
@@ -84,5 +92,6 @@
       "cespedNatural": true,
       "telefono": "945131018"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

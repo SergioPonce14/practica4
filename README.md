@@ -1,32 +1,12 @@
-# React + TypeScript + Vite
+# Registro de Jugadores · La Liga
+Misión M4 · Full Contact Forms — Web Development I.
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## Cómo probarlo
+Explora los clubes busca en tiempo real, ordena con filtros, marca tus favoritos  y haz clic en una tarjeta para ver la historia completa. 
 
-Currently, two official plugins are available:
+## Uso de IA
+Usé Gemini como pareja de programación. Ejemplo de prompt real: "Cómo hago con .refine() en Zod para restringir el dorsal si la posición es Portero y que el error salga en el campo dorsal?". Verifiqué cada paso arrancando el servidor (`npm run dev` y `json-server`), comprobando el ciclo `POST` y  `GET` en la pestaña Network y revisando la consola del navegador para ver los avisos de `safeParse`. Gran parte del CSS se apoyó en la IA
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Autopsia
+1. En `src/services/jugadores.ts` decidí validar cada jugador recibido del servidor con `safeParse` dentro de un bucle. Descarté la alternativa de usar `z.array(esquemaJugadorApi).parse()` sobre toda la lista porque un solo registro corrupto en `db.json` tumbaría toda la consulta impidiendo mostrar los jugadores válidos.
+2. En `FormularioJugador.tsx` decidí llamar a `reset()` y a `invalidateQueries({ queryKey: ["jugadores"] })` dentro del `onSuccess` de `useMutation`. Descarté hacerlo justo después de `mutacion.mutate(datos)` porque, al ser una petición asíncrona, si el servidor fallase se limpiarían los campos y el usuario perdería lo que había escrito.
